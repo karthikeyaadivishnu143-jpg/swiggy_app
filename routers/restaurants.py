@@ -9,7 +9,7 @@ restaurants=[]
 def add_restaurant(data:RestaurantCreate):
     restaurants.append(data.model_dump())
     return {"message":"Restaurant added"}
-
+# list all restaurants
 @router.get("/")
 def list_restaurants():
     return restaurants
